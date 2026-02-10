@@ -5,15 +5,15 @@ const testimonials = [
     name: "Sarah & James Mitchell",
     location: "New York, USA",
     rating: 5,
-    text: "ParadiseTravels made our honeymoon absolutely magical! The all-inclusive resort in Jamaica exceeded every expectation. From the moment we landed, everything was handled perfectly.",
-    trip: "Jamaica Honeymoon Package",
+    text: "ParadiseTravels made our honeymoon absolutely magical. The all-inclusive resort in Jamaica exceeded every expectation. From the moment we landed, everything was handled perfectly.",
+    trip: "Jamaica Honeymoon",
     avatar: "SM",
   },
   {
     name: "David Chen",
     location: "Toronto, Canada",
     rating: 5,
-    text: "I've used many travel agencies before, but none compare to the personalized service here. They planned a surprise birthday trip for my wife to St. Lucia and it was flawless!",
+    text: "I've used many travel agencies before, but none compare to the personalized service here. They planned a surprise birthday trip to St. Lucia and it was flawless.",
     trip: "St. Lucia Luxury Escape",
     avatar: "DC",
   },
@@ -21,7 +21,7 @@ const testimonials = [
     name: "The Williams Family",
     location: "London, UK",
     rating: 5,
-    text: "Travelling with three kids can be stressful, but ParadiseTravels thought of everything. The family resort in Bahamas was perfect — kids' club, activities, and gorgeous beaches.",
+    text: "Travelling with three kids can be stressful, but ParadiseTravels thought of everything. The family resort in Bahamas was perfect — kids' club, activities, gorgeous beaches.",
     trip: "Bahamas Family Adventure",
     avatar: "WF",
   },
@@ -29,74 +29,59 @@ const testimonials = [
     name: "Maria Rodriguez",
     location: "Miami, USA",
     rating: 5,
-    text: "As a solo traveler, I was a bit nervous about Caribbean trips. The team paired me with a small group tour in Barbados and I had the time of my life. Already booking my next trip!",
-    trip: "Barbados Explorer Package",
+    text: "As a solo traveler, I was nervous about Caribbean trips. The team paired me with a small group tour in Barbados and I had the time of my life. Already booking my next trip.",
+    trip: "Barbados Explorer",
     avatar: "MR",
-  },
-  {
-    name: "Robert & Lisa Clarke",
-    location: "Sydney, Australia",
-    rating: 5,
-    text: "We flew halfway across the world for our anniversary and it was worth every mile. The private villa in Jamaica with a personal butler was an experience we'll never forget.",
-    trip: "Jamaica Luxury Villa",
-    avatar: "RC",
-  },
-  {
-    name: "Michael Thompson",
-    location: "Atlanta, USA",
-    rating: 5,
-    text: "Third time booking with ParadiseTravels and they keep getting better. This time it was Trinidad Carnival — the energy, the music, the food! An absolutely incredible cultural experience.",
-    trip: "Trinidad Carnival Package",
-    avatar: "MT",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-dark relative" id="testimonials">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+    <section className="py-32 bg-navy relative" id="testimonials">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-border to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle background accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-green font-semibold text-sm uppercase tracking-widest">What Our Travelers Say</span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4 mb-6">
-            Real <span className="text-gradient-gold">Stories</span>
+        <div className="text-center mb-20">
+          <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Guest Experiences</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mt-4 mb-6">
+            What Our <span className="text-gradient-gold italic">Travelers</span> Say
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Don&apos;t just take our word for it — hear from travelers who&apos;ve experienced the ParadiseTravels difference.
-          </p>
+          <div className="line-accent-center" />
         </div>
 
         {/* Testimonial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-dark-card rounded-2xl border border-dark-border p-8 hover:border-gold/20 transition-all duration-300 group"
+              className="bg-navy-card rounded-2xl border border-navy-border p-10 hover:border-gold/15 transition-all duration-500 group"
             >
-              <Quote className="w-8 h-8 text-gold/20 mb-4 group-hover:text-gold/40 transition-colors" />
+              <Quote className="w-8 h-8 text-gold/15 mb-6 group-hover:text-gold/25 transition-colors duration-500" />
 
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-6">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-gold fill-gold" />
+                  <Star key={i} className="w-4 h-4 text-gold fill-gold/80" />
                 ))}
               </div>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
+              <p className="text-cream/50 font-light leading-relaxed mb-8 text-lg italic">&ldquo;{t.text}&rdquo;</p>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-dark-border">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green to-green-light flex items-center justify-center text-white font-bold text-sm">
+              <div className="flex items-center gap-4 pt-6 border-t border-navy-border">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-dark to-teal flex items-center justify-center text-white/80 font-light text-sm tracking-wider">
                   {t.avatar}
                 </div>
                 <div>
-                  <p className="text-white font-semibold">{t.name}</p>
-                  <p className="text-gray-500 text-sm">{t.location}</p>
+                  <p className="text-white font-light">{t.name}</p>
+                  <p className="text-cream/30 text-sm font-light">{t.location}</p>
                 </div>
-              </div>
-              <div className="mt-3">
-                <span className="text-gold text-xs font-medium bg-gold/10 px-3 py-1 rounded-full">{t.trip}</span>
+                <span className="ml-auto text-gold/40 text-xs font-light uppercase tracking-wider border border-gold/15 px-3 py-1 rounded-full">
+                  {t.trip}
+                </span>
               </div>
             </div>
           ))}

@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ParadiseTravels | Caribbean Travel Agency",
+  title: "ParadiseTravels | Luxury Caribbean Travel Experiences",
   description:
-    "Your gateway to unforgettable Caribbean adventures. Discover pristine beaches, vibrant culture, and luxury travel packages to Jamaica, Bahamas, Barbados, and more.",
-  keywords: "travel agency, Caribbean, Jamaica, Bahamas, vacation, holiday, travel packages, all inclusive",
+    "Bespoke Caribbean travel experiences crafted with care. Pristine beaches, vibrant culture, and luxury packages to Jamaica, Bahamas, Barbados, and beyond.",
+  keywords: "luxury travel, Caribbean, Jamaica, Bahamas, bespoke travel, all inclusive, vacation",
   openGraph: {
-    title: "ParadiseTravels | Caribbean Travel Agency",
-    description: "Discover paradise with hand-crafted Caribbean travel packages.",
+    title: "ParadiseTravels | Luxury Caribbean Travel Experiences",
+    description: "Bespoke Caribbean travel. Discover paradise your way.",
     type: "website",
   },
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-navy text-cream`}
       >
         <Navbar />
         <main>{children}</main>

@@ -12,7 +12,7 @@ const destinations = [
     name: "Jamaica",
     tagline: "Feel the Rhythm of the Island",
     description:
-      "Jamaica is more than a destination — it's a feeling. From the powdery white sands of Negril's Seven Mile Beach to the lush Blue Mountains, from the pulsing energy of Kingston to the luxury resorts of Montego Bay. Experience world-famous jerk cuisine, dance to reggae under the stars, and swim in bioluminescent waters.",
+      "Jamaica is more than a destination — it's a feeling. From the powdery white sands of Negril's Seven Mile Beach to the lush Blue Mountains, from the pulsing energy of Kingston to the luxury resorts of Montego Bay.",
     highlights: ["Montego Bay", "Negril", "Ocho Rios", "Kingston", "Port Antonio"],
     activities: [
       { icon: Waves, label: "Beach & Snorkeling" },
@@ -23,13 +23,12 @@ const destinations = [
     emoji: "🇯🇲",
     price: "From $899",
     bestTime: "Nov - Apr",
-    gradient: "from-green/30 to-gold/30",
   },
   {
     name: "Bahamas",
     tagline: "700 Islands of Pure Paradise",
     description:
-      "The Bahamas is the ultimate tropical escape with 700 islands and cays to explore. Swim with nurse sharks at Compass Cay, visit the famous swimming pigs of Exuma, or simply relax on some of the world's most beautiful pink sand beaches. Nassau offers vibrant nightlife and culture.",
+      "The ultimate tropical escape with 700 islands and cays to explore. Swim with nurse sharks at Compass Cay, visit the famous swimming pigs of Exuma, or simply relax on the world's most beautiful pink sand beaches.",
     highlights: ["Nassau", "Paradise Island", "Exuma", "Eleuthera", "Grand Bahama"],
     activities: [
       { icon: Waves, label: "Swimming Pigs" },
@@ -40,13 +39,12 @@ const destinations = [
     emoji: "🏝️",
     price: "From $1,199",
     bestTime: "Dec - Apr",
-    gradient: "from-cyan-500/30 to-green/30",
   },
   {
     name: "Barbados",
     tagline: "Where British Charm Meets Caribbean Soul",
     description:
-      "Barbados blends British colonial heritage with Caribbean warmth. The east coast offers dramatic Atlantic waves for surfing, while the west coast — the Platinum Coast — is home to calm turquoise waters. Don't miss the underground Harrison's Cave or the world-famous Mount Gay rum distillery.",
+      "Barbados blends British colonial heritage with Caribbean warmth. The east coast offers dramatic Atlantic waves for surfing, while the Platinum Coast is home to calm turquoise waters and luxury resorts.",
     highlights: ["Bridgetown", "Platinum Coast", "Bathsheba", "Speightstown", "Oistins"],
     activities: [
       { icon: Waves, label: "Surfing" },
@@ -57,13 +55,12 @@ const destinations = [
     emoji: "🌴",
     price: "From $999",
     bestTime: "Dec - May",
-    gradient: "from-gold/30 to-orange-500/30",
   },
   {
     name: "St. Lucia",
     tagline: "Nature's Masterpiece",
     description:
-      "St. Lucia is a natural wonder with its iconic twin Pitons rising dramatically from the sea. Hike through lush rainforests, soak in volcanic mud baths, snorkel through pristine coral reefs, and witness some of the most breathtaking sunsets in the Caribbean from your luxury resort.",
+      "St. Lucia is a natural wonder with its iconic twin Pitons rising dramatically from the sea. Hike through lush rainforests, soak in volcanic mud baths, and witness the most breathtaking sunsets in the Caribbean.",
     highlights: ["Castries", "Soufriere", "The Pitons", "Marigot Bay", "Rodney Bay"],
     activities: [
       { icon: Mountain, label: "Hike The Pitons" },
@@ -74,13 +71,12 @@ const destinations = [
     emoji: "🌋",
     price: "From $1,099",
     bestTime: "Jan - Apr",
-    gradient: "from-green/30 to-emerald-500/30",
   },
   {
     name: "Cancun",
     tagline: "Ancient Wonders Meet Beach Paradise",
     description:
-      "Cancun delivers the perfect blend of relaxation and adventure. Explore ancient Mayan ruins at Chichen Itza and Tulum, swim in mystical cenotes, snorkel in the world's second-largest coral reef, and enjoy world-class nightlife along the famous Hotel Zone strip.",
+      "The perfect blend of relaxation and adventure. Explore ancient Mayan ruins at Chichen Itza, swim in mystical cenotes, snorkel in the world's second-largest coral reef, and enjoy world-class nightlife.",
     highlights: ["Hotel Zone", "Chichen Itza", "Tulum", "Isla Mujeres", "Playa del Carmen"],
     activities: [
       { icon: Mountain, label: "Mayan Ruins" },
@@ -91,13 +87,12 @@ const destinations = [
     emoji: "🏛️",
     price: "From $799",
     bestTime: "Dec - Apr",
-    gradient: "from-red-500/30 to-green/30",
   },
   {
     name: "Trinidad & Tobago",
     tagline: "The Land of Carnival & Calypso",
     description:
-      "Experience the twin-island republic where culture explodes in color and sound. Trinidad's Carnival is the greatest show on Earth, while Tobago offers pristine beaches and the oldest protected rainforest in the Western Hemisphere. A foodie's dream with Indian, African, and Chinese influences.",
+      "Experience the twin-island republic where culture explodes in color and sound. Trinidad's Carnival is the greatest show on Earth, while Tobago offers pristine beaches and the oldest protected rainforest in the Western Hemisphere.",
     highlights: ["Port of Spain", "Tobago", "Maracas Bay", "Caroni Swamp", "Pigeon Point"],
     activities: [
       { icon: Music, label: "Carnival" },
@@ -108,76 +103,71 @@ const destinations = [
     emoji: "🎭",
     price: "From $849",
     bestTime: "Jan - May",
-    gradient: "from-red-500/30 to-gold/30",
   },
 ];
 
 export default function DestinationsPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-b from-dark-card to-dark relative overflow-hidden">
-        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-green/5 rounded-full blur-3xl" />
+      <section className="py-24 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/3 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-teal/3 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-green font-semibold text-sm uppercase tracking-widest">Explore The Caribbean</span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mt-4 mb-6">
-            Our <span className="text-gradient-gold">Destinations</span>
+        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Explore The Caribbean</span>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
+            Our <span className="text-gradient-gold italic">Destinations</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Each destination offers a unique blend of culture, adventure, and relaxation. Let us help you find your perfect Caribbean paradise.
+          <div className="line-accent-center" />
+          <p className="text-cream/40 max-w-2xl mx-auto text-lg font-light mt-6 leading-relaxed">
+            Each destination offers a unique blend of culture, adventure, and relaxation.
           </p>
         </div>
       </section>
 
-      {/* Destinations List */}
-      <section className="py-16 bg-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      {/* Destinations */}
+      <section className="py-20 bg-navy">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-24">
           {destinations.map((dest, index) => (
-            <div
-              key={dest.name}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
-            >
-              {/* Image Card */}
-              <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className={`aspect-[4/3] rounded-3xl bg-gradient-to-br ${dest.gradient} flex items-center justify-center border border-dark-border relative overflow-hidden group`}>
-                  <span className="text-8xl group-hover:scale-125 transition-transform duration-700">{dest.emoji}</span>
-                  <div className="absolute bottom-6 left-6 bg-dark/80 backdrop-blur-sm px-4 py-2 rounded-xl">
-                    <span className="text-gold font-bold">{dest.price}</span>
-                    <span className="text-gray-400 text-sm ml-2">per person</span>
+            <div key={dest.name} className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Image */}
+              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-navy-lighter to-teal-dark/10 flex items-center justify-center border border-navy-border relative overflow-hidden group">
+                  <span className="text-8xl group-hover:scale-110 transition-transform duration-700">{dest.emoji}</span>
+                  <div className="absolute bottom-6 left-6 glass rounded-xl px-5 py-2.5">
+                    <span className="text-gold font-light">{dest.price}</span>
+                    <span className="text-cream/30 text-sm ml-2 font-light">per person</span>
                   </div>
-                  <div className="absolute top-6 right-6 bg-dark/80 backdrop-blur-sm px-4 py-2 rounded-xl">
+                  <div className="absolute top-6 right-6 glass rounded-xl px-5 py-2.5">
                     <Sun className="w-4 h-4 text-gold inline mr-2" />
-                    <span className="text-gray-300 text-sm">Best: {dest.bestTime}</span>
+                    <span className="text-cream/50 text-sm font-light">Best: {dest.bestTime}</span>
                   </div>
                 </div>
               </div>
 
               {/* Content */}
-              <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <h2 className="text-4xl font-bold text-white mb-2">{dest.name}</h2>
-                <p className="text-gold font-medium text-lg mb-4">{dest.tagline}</p>
-                <p className="text-gray-400 leading-relaxed mb-6">{dest.description}</p>
+              <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                <h2 className="text-4xl font-light text-white mb-2">{dest.name}</h2>
+                <p className="text-gold/70 font-light text-lg mb-6 italic">{dest.tagline}</p>
+                <p className="text-cream/40 font-light leading-relaxed mb-8">{dest.description}</p>
 
-                {/* Highlights */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {dest.highlights.map((h) => (
-                    <span key={h} className="flex items-center gap-1 bg-dark-card border border-dark-border px-3 py-1.5 rounded-full text-sm text-gray-300">
-                      <MapPin className="w-3 h-3 text-green" />
+                    <span key={h} className="flex items-center gap-1.5 bg-navy-card border border-navy-border px-3 py-1.5 text-xs text-cream/40 uppercase tracking-wider font-light">
+                      <MapPin className="w-3 h-3 text-teal" />
                       {h}
                     </span>
                   ))}
                 </div>
 
-                {/* Activities */}
-                <div className="grid grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-2 gap-3 mb-10">
                   {dest.activities.map((a) => {
                     const Icon = a.icon;
                     return (
-                      <div key={a.label} className="flex items-center gap-3 bg-dark-card border border-dark-border rounded-xl px-4 py-3">
-                        <Icon className="w-5 h-5 text-gold flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{a.label}</span>
+                      <div key={a.label} className="flex items-center gap-3 bg-navy-card border border-navy-border rounded-xl px-4 py-3">
+                        <Icon className="w-4 h-4 text-gold/60 flex-shrink-0" />
+                        <span className="text-cream/40 text-sm font-light">{a.label}</span>
                       </div>
                     );
                   })}
@@ -185,10 +175,10 @@ export default function DestinationsPage() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-dark text-dark px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-gold/30 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-3 bg-gold text-navy px-8 py-3.5 text-sm uppercase tracking-[0.15em] font-medium hover:bg-gold-light transition-all duration-500 group"
                 >
                   Plan Your Trip
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
