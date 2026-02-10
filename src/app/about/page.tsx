@@ -29,14 +29,14 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-16 sm:pt-24">
       {/* Header */}
-      <section className="py-24 bg-navy-light relative overflow-hidden">
-        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-teal/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <section className="py-12 sm:py-24 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-teal/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Our Story</span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
             About <span className="text-gradient-gold italic">ParadiseTravels</span>
           </h1>
           <div className="line-accent-center" />
@@ -47,9 +47,9 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="py-12 sm:py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-20 items-center">
             <div>
               <h2 className="text-4xl font-light text-white mb-8">
                 Born in the <span className="text-gradient-teal italic">Caribbean</span>
@@ -80,9 +80,9 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-navy-light border-y border-navy-border">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+      <section className="py-12 sm:py-20 bg-navy-light border-y border-navy-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
             {stats.map((stat) => {
               const Icon = stat.icon;
               return (
@@ -100,9 +100,9 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-20">
+      <section className="py-12 sm:py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="text-center mb-10 sm:mb-20">
             <span className="text-gold text-xs uppercase tracking-[0.3em] font-light">What Drives Us</span>
             <h2 className="text-4xl font-light text-white mt-4 mb-6">
               Our <span className="text-gradient-teal italic">Values</span>
@@ -113,7 +113,7 @@ export default function AboutPage() {
             {values.map((v) => {
               const Icon = v.icon;
               return (
-                <div key={v.title} className="bg-navy-card rounded-2xl border border-navy-border p-10 text-center hover:border-gold/15 transition-all duration-500">
+                <div key={v.title} className="bg-navy-card rounded-2xl border border-navy-border p-6 sm:p-10 text-center hover:border-gold/15 transition-all duration-500">
                   <div className="w-16 h-16 rounded-2xl bg-teal/8 border border-teal/15 flex items-center justify-center mx-auto mb-8">
                     <Icon className="w-7 h-7 text-teal-light" />
                   </div>
@@ -127,9 +127,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 bg-navy-light">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-20">
+      <section className="py-12 sm:py-24 bg-navy-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="text-center mb-10 sm:mb-20">
             <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">The People Behind Paradise</span>
             <h2 className="text-4xl font-light text-white mt-4 mb-6">
               Meet Our <span className="text-gradient-gold italic">Team</span>
@@ -138,7 +138,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((m) => (
-              <div key={m.name} className="bg-navy rounded-2xl border border-navy-border p-10 text-center group hover:border-gold/15 transition-all duration-500">
+              <div key={m.name} className="bg-navy rounded-2xl border border-navy-border p-6 sm:p-10 text-center group hover:border-gold/15 transition-all duration-500">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-dark to-teal flex items-center justify-center text-white/80 font-light text-xl tracking-wider mx-auto mb-6 group-hover:scale-105 transition-transform duration-500">
                   {m.initials}
                 </div>
@@ -152,9 +152,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-navy relative">
+      <section className="py-16 sm:py-24 bg-navy relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-border to-transparent" />
-        <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">
             Ready to experience the difference?
           </h2>

@@ -16,14 +16,14 @@ const contactInfo = [
 
 export default function ContactPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-16 sm:pt-24">
       {/* Header */}
-      <section className="py-24 bg-navy-light relative overflow-hidden">
-        <div className="absolute top-10 left-20 w-64 h-64 bg-teal/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gold/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <section className="py-12 sm:py-24 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-10 left-20 w-64 h-64 bg-teal/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gold/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <span className="text-gold text-xs uppercase tracking-[0.3em] font-light">Get In Touch</span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
             Contact <span className="text-gradient-teal italic">Us</span>
           </h1>
           <div className="line-accent-center" />
@@ -34,9 +34,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid lg:grid-cols-3 gap-12">
+      <section className="py-12 sm:py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-3 gap-8 sm:gap-12">
             {/* Sidebar */}
             <div className="lg:col-span-1 space-y-6">
               {contactInfo.map((info) => {
@@ -59,7 +59,7 @@ export default function ContactPage() {
               })}
 
               {/* Live chat CTA */}
-              <div className="bg-navy-card rounded-2xl border border-gold/15 p-8 text-center">
+              <div className="bg-navy-card rounded-2xl border border-gold/15 p-6 sm:p-8 text-center">
                 <MessageCircle className="w-10 h-10 text-gold/50 mx-auto mb-4" />
                 <h3 className="text-white font-light mb-2">Prefer Live Chat?</h3>
                 <p className="text-cream/30 text-sm font-light mb-5">
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="bg-navy-card rounded-2xl border border-navy-border p-8 md:p-12">
+              <div className="bg-navy-card rounded-2xl border border-navy-border p-5 sm:p-8 md:p-12">
                 <h2 className="text-2xl font-light text-white mb-2">Plan Your Dream Trip</h2>
                 <p className="text-cream/30 font-light mb-10">
                   Tell us about your travel plans and we&apos;ll create a personalized itinerary just for you.

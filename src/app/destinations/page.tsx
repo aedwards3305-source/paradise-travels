@@ -108,15 +108,15 @@ const destinations = [
 
 export default function DestinationsPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-16 sm:pt-24">
       {/* Page Header */}
-      <section className="py-24 bg-navy-light relative overflow-hidden">
-        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-teal/3 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-12 sm:py-24 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-10 right-20 w-64 h-64 bg-gold/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-teal/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
 
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Explore The Caribbean</span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
             Our <span className="text-gradient-gold italic">Destinations</span>
           </h1>
           <div className="line-accent-center" />
@@ -127,21 +127,21 @@ export default function DestinationsPage() {
       </section>
 
       {/* Destinations */}
-      <section className="py-20 bg-navy">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-24">
+      <section className="py-12 sm:py-20 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-16 sm:space-y-24">
           {destinations.map((dest, index) => (
-            <div key={dest.name} className="grid lg:grid-cols-2 gap-16 items-center">
+            <div key={dest.name} className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
               {/* Image */}
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-navy-lighter to-teal-dark/10 flex items-center justify-center border border-navy-border relative overflow-hidden group">
-                  <span className="text-8xl group-hover:scale-110 transition-transform duration-700">{dest.emoji}</span>
-                  <div className="absolute bottom-6 left-6 glass rounded-xl px-5 py-2.5">
-                    <span className="text-gold font-light">{dest.price}</span>
-                    <span className="text-cream/30 text-sm ml-2 font-light">per person</span>
+                  <span className="text-6xl sm:text-8xl group-hover:scale-110 transition-transform duration-700">{dest.emoji}</span>
+                  <div className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 glass rounded-xl px-3 py-1.5 sm:px-5 sm:py-2.5">
+                    <span className="text-gold font-light text-sm sm:text-base">{dest.price}</span>
+                    <span className="text-cream/30 text-xs sm:text-sm ml-2 font-light">per person</span>
                   </div>
-                  <div className="absolute top-6 right-6 glass rounded-xl px-5 py-2.5">
-                    <Sun className="w-4 h-4 text-gold inline mr-2" />
-                    <span className="text-cream/50 text-sm font-light">Best: {dest.bestTime}</span>
+                  <div className="absolute top-3 right-3 sm:top-6 sm:right-6 glass rounded-xl px-3 py-1.5 sm:px-5 sm:py-2.5">
+                    <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold inline mr-1 sm:mr-2" />
+                    <span className="text-cream/50 text-xs sm:text-sm font-light">Best: {dest.bestTime}</span>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function DestinationsPage() {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 mb-10">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-8 sm:mb-10">
                   {dest.activities.map((a) => {
                     const Icon = a.icon;
                     return (

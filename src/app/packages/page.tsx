@@ -45,15 +45,15 @@ const specialPackages = [
 
 export default function PackagesPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-16 sm:pt-24">
       {/* Header */}
-      <section className="py-24 bg-navy-light relative overflow-hidden">
-        <div className="absolute top-10 left-20 w-64 h-64 bg-teal/3 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gold/3 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-12 sm:py-24 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-10 left-20 w-64 h-64 bg-teal/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
+        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gold/3 rounded-full blur-3xl pointer-events-none hidden sm:block" />
 
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <span className="text-gold text-xs uppercase tracking-[0.3em] font-light">Find Your Perfect Trip</span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mt-4 mb-6">
             Travel <span className="text-gradient-teal italic">Packages</span>
           </h1>
           <div className="line-accent-center" />
@@ -66,9 +66,9 @@ export default function PackagesPage() {
       <Packages />
 
       {/* Special Packages */}
-      <section className="py-32 bg-navy">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-20">
+      <section className="py-16 sm:py-24 lg:py-32 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="text-center mb-10 sm:mb-20">
             <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Special Occasions</span>
             <h2 className="text-4xl sm:text-5xl font-light text-white mt-4 mb-6">
               Themed <span className="text-gradient-gold italic">Experiences</span>
@@ -80,7 +80,7 @@ export default function PackagesPage() {
             {specialPackages.map((pkg) => {
               const Icon = pkg.icon;
               return (
-                <div key={pkg.title} className="bg-navy-card rounded-2xl border border-navy-border p-10 hover:border-gold/15 transition-all duration-500 group">
+                <div key={pkg.title} className="bg-navy-card rounded-2xl border border-navy-border p-6 sm:p-10 hover:border-gold/15 transition-all duration-500 group">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-14 h-14 rounded-xl bg-gold/8 border border-gold/15 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/12 transition-colors duration-500">
                       <Icon className="w-6 h-6 text-gold/70" />
@@ -116,9 +116,9 @@ export default function PackagesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-navy-light relative">
+      <section className="py-16 sm:py-24 bg-navy-light relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-border to-transparent" />
-        <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">
             Don&apos;t see what you&apos;re looking for?
           </h2>

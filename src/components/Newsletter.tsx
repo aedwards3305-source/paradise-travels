@@ -16,19 +16,19 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-32 bg-navy relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-navy relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-border to-transparent" />
 
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/3 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
         <span className="text-teal text-xs uppercase tracking-[0.3em] font-light">Stay Connected</span>
         <h2 className="text-4xl sm:text-5xl font-light text-white mt-4 mb-6">
           Exclusive <span className="text-gradient-gold italic">Offers</span>
         </h2>
         <div className="line-accent-center" />
-        <p className="text-cream/40 max-w-xl mx-auto text-lg font-light mt-6 mb-12 leading-relaxed">
+        <p className="text-cream/40 max-w-xl mx-auto text-lg font-light mt-6 mb-8 sm:mb-12 leading-relaxed">
           Be the first to know about flash sales, new destinations, and member-only travel deals.
         </p>
 
